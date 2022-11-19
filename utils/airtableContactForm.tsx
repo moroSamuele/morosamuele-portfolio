@@ -1,4 +1,4 @@
-import Airtable from "airtable";
+const Airtable = require("airtable")
 
 // Airtable authentication
 Airtable.configure({

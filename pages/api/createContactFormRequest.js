@@ -1,7 +1,7 @@
 import { airTableTable, getMinifiedIRecord } from '../../utils/airtableContactForm';
 
 
-export default async (req, res) => {
+export default createContactFormRequest = async (req, res) => {
   const body = req.body;
 
   try {

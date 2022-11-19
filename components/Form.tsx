@@ -35,7 +35,7 @@ const Form = () => {
 
       await sleep(1000);
 
-      setMessage('👍 Awesome! Thanks for contacting me.');
+      setMessage('👍 Awesome! Thanks for writing me.');
       resetForm();
       setSubmitted(false);
     },

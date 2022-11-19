@@ -1,11 +1,9 @@
 const Airtable = require("airtable")
 
-// Airtable authentication
-Airtable.configure({
-  apiKey: process.env.NEXT_PUBLIC_AIRTABLE_API_KEY,
-})
-
-const airTableBase = Airtable.base(process.env.NEXT_PUBLIC_AIRTABLE_BASE_ID);
+const airTableBase = Airtable({
+    apiKey: process.env.NEXT_PUBLIC_AIRTABLE_API_KEY
+  })
+  .base(process.env.NEXT_PUBLIC_AIRTABLE_BASE_ID);
 
 const airTableTable = airTableBase(process.env.NEXT_PUBLIC_AIRTABLE_TABLE_NAME);
 

@@ -1,3 +1,5 @@
+import { Analytics } from '@vercel/analytics/react';
+
 import Head from 'next/head'
 
 import { Space_Grotesk } from '@next/font/google'
@@ -50,6 +52,8 @@ export default function Home() {
             <Form />
           </div>
         </section>
+
+        <Analytics />
 
         <footer>
           <TopBottomBar />

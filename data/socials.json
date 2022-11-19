@@ -1,0 +1,24 @@
+{
+  "social": [
+    {
+      "image": "/images/socials/icon-github.svg",
+      "imageAlt": "Visit my code base on GitHub",
+      "link": "https://github.com/moroSamuele"
+    },
+    {
+      "image": "/images/socials/icon-frontend-mentor.svg",
+      "imageAlt": "A lot of things here",
+      "link": "https://www.frontendmentor.io/profile/moroSamuele"
+    },
+    {
+      "image": "/images/socials/icon-linkedin.svg",
+      "imageAlt": "I love what i've learned",
+      "link": "https://www.linkedin.com/in/moro-samuele/"
+    },
+    {
+      "image": "/images/socials/icon-twitter.svg",
+      "imageAlt": "Twit Twit",
+      "link": "https://twitter.com/saaaam_ueeeee"
+    }
+  ]
+}

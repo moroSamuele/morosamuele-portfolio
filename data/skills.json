@@ -1,0 +1,36 @@
+{
+  "skill": [
+    {
+      "name": "HTML",
+      "startYear": 2012
+    },
+    {
+      "name": "CSS",
+      "startYear": 2012
+    },
+    {
+      "name": "Sass",
+      "startYear": 2020
+    },
+    {
+      "name": "TailwindCSS",
+      "startYear": 2020
+    },
+    {
+      "name": "Javascript",
+      "startYear": 2014
+    },
+    {
+      "name": "jQuery",
+      "startYear": 2017
+    },
+    {
+      "name": "React",
+      "startYear": 2021
+    },
+    {
+      "name": "PHP",
+      "startYear": 2013
+    }
+  ]
+}

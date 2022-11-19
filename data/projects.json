@@ -1,0 +1,18 @@
+{
+  "project": [
+    {
+      "image": "/images/projects/thumbnail-project-1-large.webp",
+      "linkPreview": "https://frontend-mentor-easybank-landing-page-six.vercel.app/",
+      "linkGitHub": "https://github.com/moroSamuele/frontend-mentor-easybank-landing-page",
+      "name": "Easybank Landing Page",
+      "languages": ["HTML", "Tailwind", "NextJS", "Typescript"]
+    },
+    {
+      "image": "/images/projects/thumbnail-project-2-large.webp",
+      "linkPreview": "https://frontend-mentor-clock-app-topaz.vercel.app/",
+      "linkGitHub": "https://github.com/moroSamuele/frontend-mentor-clock-app",
+      "name": "Clock app",
+      "languages": ["HTML", "Tailwind", "NextJS"]
+    }
+  ]
+}

@@ -1,0 +1,585 @@
+@use 'animations'
+
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+  scroll-behavior: smooth !important
+
+:root
+  --deepBlack: hsl(0 0% 8%)
+  --errorRed: hsl(7, 100%, 68%)
+  --fullWhite: hsl(0 0% 100%)
+  --grayishBlack: hsl(0 0% 14%)
+  --hackerGreen: hsl(153 71% 59%)
+  --veryLightGray: hsl(0 0% 85%)
+
+:where(body, html)
+  background-color: var(--deepBlack)
+  height: 100%
+  width: 100%
+
+a
+  color: inherit
+  text-decoration: none
+
+:where(input, textarea, button)
+  border: 0
+  outline: none
+  resize: none
+
+:where(header, footer)
+  align-items: center
+  display: flex
+  flex-direction: column
+  float: left
+  gap: 20px
+  padding-top: 20px
+  width: 100%
+  z-index: 10
+
+header
+  position: absolute
+
+footer
+  background: var(--grayishBlack)
+  padding: 39px 0 60px
+
+.body__mainLogo
+  color: var(--fullWhite)
+  font-size: 24px
+  font-weight: 700
+  letter-spacing: -0.333333px
+  line-height: 32px
+
+
+// Socials bar
+.body__socialsContainer
+  display: flex
+  gap: 25px
+
+.socialsContainer__socialImage
+  width: 20px
+
+  img
+    width: auto
+
+// Main Content
+.body__mainContent
+  display: flex
+  flex-direction: column
+  float: left
+  justify-content: center
+  overflow-x: hidden
+  width: 100%
+  
+.mainContent__profileContent
+  height: 383px
+  display: flex
+  justify-content: center
+  position: relative
+  width: 100%
+
+  .patternRings
+    left: -342px
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+
+  .profileContent__patternCircle
+    bottom: 0
+    position: absolute
+    right: -64.5px
+
+  .mainContent__profileImage
+    width: 174px
+    position: relative
+
+    img
+      object-fit: cover
+
+    .profileImage__desktopImage,
+    .profileImage__tabletImage
+      display: none
+  
+.mainContent__profileInfos
+  color: var(--fullWhite)
+  display: flex
+  font-size: 16px
+  flex-direction: column
+  gap: 24px
+  line-height: 26px
+  padding: 40px 16px 80px
+  text-align: center
+
+  h1
+    font-size: 40px
+    font-weight: 700
+    letter-spacing: -1.14px
+    line-height: 40px
+
+  p
+    color: var(--veryLightGray)
+    font-weight: 500
+
+.contactContent__contactContainer button,
+.modernButton__button a
+  background-color: transparent
+  border-bottom: 2px solid var(--hackerGreen)
+  color: var(--fullWhite)
+  cursor: pointer
+  font-size: 16px
+  font-weight: 700
+  letter-spacing: 2.28571px
+  padding-bottom: 10px
+  text-transform: uppercase
+  transition: 0.1s linear
+
+.contactContent__contactContainer button:hover,
+.modernButton__button a:hover
+  color: var(--hackerGreen)
+
+
+// Skills Content
+.wrapper
+  float: left
+  overflow-x: hidden
+  padding: 0 16px
+  width: 100%
+
+.body__skillsContent
+  column-gap: 7px
+  border-bottom: 1px solid var(--fullWhite)
+  border-top: 1px solid var(--fullWhite)
+  display: grid
+  float: left
+  grid-template-columns: repeat(auto-fill, minmax(278px, 1fr))
+  margin-bottom: 80px
+  padding: 40px 0
+  position: relative
+  row-gap: 24px
+  width: 100%
+
+  .patternRings
+    bottom: -64.5px
+    position: absolute
+    right: -344px
+
+.skillsContent__skill
+  display: flex
+  flex-direction: column
+  gap: 1px
+
+  h3
+    color: var(--fullWhite)
+    font-size: 32px
+    font-weight: 700
+    letter-spacing: -1px
+    line-height: 40px
+    text-align: center
+
+  p
+    color: var(--veryLightGray)
+    font-size: 16px
+    font-weight: 500
+    line-height: 26px
+    text-align: center
+
+
+// Projects Content
+.body__projectsContent
+  display: flex
+  flex-direction: column
+  float: left
+  gap: 40px
+  padding: 0 0 80px
+  width: 100%
+
+.projectsContent__titleContent
+  align-items: center
+  display: flex
+  flex: 0 0 100%
+  justify-content: space-between
+
+  h3
+    color: var(--fullWhite)
+    font-size: 40px
+    font-weight: 700
+    letter-spacing: -1.14px
+    line-height: 40px
+
+.projectsContent__projectsContainer
+  display: grid
+  grid-template-columns: repeat(auto-fill, minmax(354px, 1fr))
+  row-gap: 40px
+
+.projectsContainer__projectCard
+  display: block
+
+.projectCard__projectImage
+  height: 253px
+  margin-bottom: 20px
+  position: relative
+  width: 100%
+
+  img
+    object-fit: cover
+
+.projectCard__projectInfos
+  display: flex
+  flex-direction: column
+  gap: 7px
+  width: 100%
+
+  h4
+    color: var(--fullWhite)
+    font-size: 24px
+    font-weight: 700
+    line-height: 32px
+    text-transform: uppercase
+
+.projectCard__projectLanguagesInfo
+  display: flex
+  column-gap: 18px
+  flex: 0 0 100%
+  flex-wrap: wrap
+  row-gap: 9px
+
+  p
+    color: var(--veryLightGray)
+    font-size: 18px
+    font-weight: 500
+    line-height: 28px
+    text-transform: uppercase
+
+.projectCard__usefullLinks
+  display: flex
+  flex: 0 0 100%
+  gap: 30px
+  margin-top: 13px
+
+
+// Contact Content
+.body__contactContent
+  background: var(--grayishBlack)
+  float: left
+  padding: 0 16px
+  width: 100%
+  isolation: isolate
+
+.contactContent__contactContainer
+  border-bottom: 1px solid var(--fullWhite)
+  display: flex
+  flex-direction: column
+  padding: 60px 0 87px
+  row-gap: 50px
+  width: 100%
+
+  form
+    display: flex
+    flex: 0 0 100%
+    flex-direction: column
+    row-gap: 32px
+
+    button
+      float: right
+
+.contactForm__titleContent
+  display: flex
+  flex-direction: column
+  row-gap: 20px
+  text-align: center
+
+  h3
+    color: var(--fullWhite)
+    font-size: 40px
+    font-weight: 700
+    letter-spacing: -1.13636px
+    line-height: 40px
+
+  p
+    color: var(--veryLightGray)
+    font-size: 16px
+    font-weight: 500
+    line-height: 26px
+
+.contactForm__sendedMessageContent
+  background: #313131
+  border-radius: 6px
+  color: var(--fullWhite)
+  font-size: 16px
+  font-weight: 500
+  line-height: 26px
+  padding: 12px 20px
+
+.contactForm__inputContainer
+  flex: 0 0 100%
+
+.contactForm__inputContent
+  position: relative
+
+  img
+    position: absolute
+    right: 0
+
+  :where(input, textarea)
+    color: var(--fullWhite)
+    background-color: transparent
+    border-bottom: 1px solid var(--fullWhite)
+    font-family: inherit
+    font-size: 16px
+    font-weight: 500
+    letter-spacing: -0.2222px
+    line-height: 26px
+    padding: 0 30px 17px 24px
+    width: 100%
+
+  textarea
+    height: 107px
+
+  .patternRings
+      left: -343px
+      z-index: -1
+
+.contactForm__inputError
+  color: var(--errorRed)
+  font-size: 12p
+  font-weight: 500
+  letter-spacing: -0.1666667px
+  line-height: 25px
+  margin-top: 5px
+  text-align: right
+  width: 100%
+
+.contactForm__buttonIsSubmitting
+  cursor: not-allowed!important 
+  display: flex
+  justify-content: center
+  width: 156px
+
+.contactForm__waitingSpinner
+  height: 18.5px
+  position: relative
+  width: 33px
+
+  img
+    object-fit: cover
+
+
+// Tablet size
+@media (min-width: 768px)
+  :where(header, footer)
+    flex-direction: row
+    justify-content: space-between
+    padding: 30px
+
+  .body__mainContent
+    align-items: end
+    flex-direction: row-reverse
+    justify-content: end
+    margin-bottom: 60px
+
+  .mainContent__profileContent
+    height: 600px
+    justify-content: end
+
+    .patternRings
+      left: -265px
+      top: 0
+      transform: translateY(86px)
+
+    .mainContent__profileImage
+      width: 322px
+
+      .profileImage__tabletImage
+        display: block
+      
+      .profileImage__mobileImage
+        display: none
+
+
+  .mainContent__profileInfos
+    font-size: 18px
+    gap: 34px
+    left: 0
+    line-height: 28px
+    width: 70%
+    padding: 0 16px 0 30px
+    position: absolute
+    text-align: left
+
+    h1
+      font-size: 72px
+      letter-spacing: 0
+      line-height: 72px
+      margin-bottom: 26px
+
+    p
+      color: var(--veryLightGray)
+      font-weight: 500
+
+  // Skills Content
+  .wrapper
+    padding: 0 30px
+
+  .body__skillsContent
+    border-bottom: 0
+    margin-bottom: 100px
+    padding: 52px 0 0
+    row-gap: 52px
+
+    .patternRings
+      bottom: -64.5px
+      position: absolute
+      right: -362px
+
+  .skillsContent__skill
+    gap: 14px
+
+    h3
+      font-size: 48px
+      letter-spacing: 0
+      line-height: 56px
+      text-align: left
+
+    p
+      font-size: 18px
+      line-height: 28px
+      text-align: left
+
+  // Projects Content
+  .body__projectsContent
+    column-gap: 60px
+    padding: 0 0 80px
+    width: 100%
+
+  .projectsContent__titleContent
+
+    h3
+      font-size: 72px
+      letter-spacing: 0
+      line-height: 72px
+
+  .projectsContent__projectsContainer
+    column-gap: 24px
+    grid-template-columns: repeat(auto-fill, minmax(342px, calc(50% - 12px)))
+    row-gap: 60px
+
+  // Contact Content
+  .body__contactContent
+    padding: 0 30px
+
+  .contactContent__contactContainer
+    padding: 60px 130px 92px
+    row-gap: 48px
+
+  .contactForm__titleContent
+    row-gap: 20px
+
+    h3
+      font-size: 72px
+      letter-spacing: -2.04545px
+      line-height: 72px
+
+    p
+      font-size: 18px
+      line-height: 28px
+
+  footer
+    padding: 30px 30px 40px
+
+
+// Desktop Size
+@media (min-width: 1024px)
+  :where(header, footer)
+    padding-left: 165px
+    padding-right: 165px
+
+  header
+
+    .body__socialsContainer
+      margin-right: 30px
+
+
+  .body__mainContent
+    align-items: center
+    padding: 0 165px
+    margin-bottom: 104px
+
+  .mainContent__profileContent
+    height: 729px
+
+    .patternRings
+      left: -265px
+      top: 33px
+
+    .profileContent__patternCircle
+      bottom: 70px
+      position: absolute
+      right: 445px - 64.5px
+
+    .mainContent__profileImage
+      width: 445px
+
+      img
+        object-fit: cover
+
+      .profileImage__desktopImage
+        display: block
+      
+      .profileImage__mobileImage
+        display: none
+
+  .mainContent__profileInfos
+    gap: 40px
+    padding-left: 165px
+
+    h1
+      font-size: 88px
+      letter-spacing: -2.5px
+      line-height: 88px
+      margin-bottom: 0
+
+    p
+      margin-bottom: 20px
+
+  .wrapper
+    padding: 0 165px
+
+  .body__skillsContent
+    padding-top: 72px
+    margin-bottom: 140px
+
+    .patternRings
+      right: -404px
+
+
+  .body__projectsContent
+    gap: 80px
+
+  .projectCard__projectImage
+    height: 400px
+
+  .contactContent__contactContainer
+    column-gap: 220px
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+
+    .contactForm__titleContent
+      text-align: left
+      row-gap: 36px
+      
+      h3
+        font-size: 88px
+        letter-spacing: -2.5px
+        line-height: 88px
+
+  .contactForm__inputContainer
+    flex: none
+
+    .patternRings
+      display: none
+
+  footer
+    padding-left: 165px
+    padding-right: 165px

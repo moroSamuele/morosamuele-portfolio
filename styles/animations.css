@@ -1,0 +1,22 @@
+@-webkit-keyframes bouncingBorderIn {
+  0% {
+    transform: scale(0, 1);
+  }
+  50% {
+    transform: scale(0.5 1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+@keyframes bouncingBorderIn {
+  0% {
+    transform: scale(0, 1);
+  }
+  50% {
+    transform: scale(0.5 1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}/*# sourceMappingURL=animations.css.map */
